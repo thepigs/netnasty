@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/thepigs/netnasty/issues"
   },
-  "homepage": "https://github.com/thepigs/netnasty#readme"
+  "homepage": "https://github.com/thepigs/netnasty#readme",
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
