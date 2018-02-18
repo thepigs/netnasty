@@ -1,11 +1,8 @@
-import app from './app'
+import "reflect-metadata";
+import {createExpressServer} from "routing-controllers";
+import {AuthController} from "auth";
 
-const port = process.env.PORT || 3000
-
-app.listen(port, (err:any) => {
-  if (err) {
-    return console.log(err)
-  }
-
-  return console.log(`server is listening on ${port}`)
-})
+createExpressServer({
+    routePrefix: "/api",
+    controllers: [AuthController]
+}).listen(3000);
