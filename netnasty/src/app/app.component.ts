@@ -3,14 +3,14 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.css']
 })
-export class AppComponent {
-	title = 'app';
+export class HomeComponent {
+	title = 'home';
 	mobileQuery: MediaQueryList;
 
-	fillerNav = Array(50).fill(0).map((_, i) => `Nav Item ${i + 1}`);
+	fillerNav = [ 'People','Devices','Schedule'];
 
 	fillerContent = Array(50).fill(0).map(() =>
 		`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

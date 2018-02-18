@@ -5,6 +5,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
 import {CdkTableModule} from '@angular/cdk/table';
+import { RouterModule, Routes } from '@angular/router';
+
+import { AppComponent } from './app.component';
+
+
+import { LoginComponent } from './login/login.component';
+// import { PeopleComponent } from '../people/people.component';
+// import { DevicesComponent } from '../devices/devices.component';
+// import { SchedulesComponent } from '../schedules/schedules.component';
 import {
 
   MatAutocompleteModule,
@@ -40,8 +49,18 @@ import {
   MatStepperModule
 } from '@angular/material';
 
-
-import { AppComponent } from './app.component';
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'netnasty',
+    component: HomeComponent,
+    data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/netnasty',
+    pathMatch: 'full'
+  }
+];
 @NgModule({
   exports: [
     CdkTableModule,
@@ -98,6 +117,6 @@ export class DemoMaterialModule {}
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[AppComponent]
+  entryComponents:[]
 })
 export class AppModule { }
